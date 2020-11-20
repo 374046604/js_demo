@@ -14,7 +14,6 @@ export function importAll(r) {
         })
         }
     })
-    console.log(arr);
     return arr;
 }
   
