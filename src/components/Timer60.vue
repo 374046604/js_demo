@@ -1,7 +1,7 @@
 <template>
   <div class="timer60">
-    <el-button type="primary" v-if="nowType==1" @click="getCode">获取验证码</el-button>
-    <el-button type="primary" v-if="nowType==2">{{nowTime}}</el-button>
+    <el-button size="mini" type="primary" round plain v-if="nowType==1" @click="getCode">获取验证码</el-button>
+    <el-button size="mini" type="primary" round plain v-if="nowType==2">{{nowTime}}</el-button>
   </div>
 </template>
 

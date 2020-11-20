@@ -14,7 +14,7 @@ export default {
     return {
       componentNames:{
         'timer60':'倒计时60秒',
-        'timer120':'倒计时120秒'
+        'distanceformatting':'距离格式化'
       },
       componentDoms:''
     };
