@@ -1,24 +1,4 @@
-# js_demo
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+        ##这个项目是平时工作遇到的小功能，欢迎相互学习！
+        'timer60':'倒计时60秒',
+        'distanceformatting':'距离格式化',
+        'movablearea':'小程序实现悬浮球(能拖动)'
