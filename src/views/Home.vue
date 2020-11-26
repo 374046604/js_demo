@@ -15,7 +15,8 @@ export default {
       componentNames:{
         'timer60':'倒计时60秒',
         'distanceformatting':'距离格式化',
-        'movablearea':'小程序实现悬浮球(能拖动)'
+        'movablearea':'小程序实现悬浮球(能拖动)',
+        'isalipay':'判断是支付宝还是微信支付'
       },
       componentDoms:''
     };
