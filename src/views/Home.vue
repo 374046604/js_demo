@@ -20,7 +20,8 @@ export default {
         'distanceformatting':'距离格式化,手机格式化',
         'movablearea':'小程序实现悬浮球(能拖动)',
         'isalipay':'判断是支付宝还是微信支付,生成小程序码',
-        'mycomponent':'手动封装个分页组件,(感觉组件的逻辑还是要独立,不要和别的组件有关联)'
+        'mycomponent':'手动封装个分页组件,(感觉组件的逻辑还是要独立,不要和别的组件有关联)',
+        'update':'图片上传'
       },
       componentDoms:''
     };
