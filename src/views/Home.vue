@@ -3,6 +3,9 @@
     <a href="http://note.youdao.com/s/FyIxiORt" >
       <el-button size="mini" type="primary" round plain>学习笔记</el-button>
     </a>
+    <a href="http://note.youdao.com/s/FyIxiORt" >
+      <el-button size="mini" type="primary" round plain>手动封装个分页组件</el-button>
+    </a>
     <router-link :to="item" v-for="(item,index) in componentDoms" :key="index">
       <el-button size="mini" type="primary" round plain>{{componentNames[item]}}</el-button>
     </router-link>
@@ -33,33 +36,6 @@ export default {
       item = item.slice(2,-4);
       return item;
     })
-    if(true){
-      var aa =100;
-      console.log(aa);
-    }
-    //函数作用域，这里是mounted(),不是之前理解的{}
-    console.log(aa);
-    if(true){
-      let bb = 100;
-      console.log(bb);
-    }
-    //let 块作用域就是附件
-    // console.log(bb);
-
-
-    let age = 30;
-    console.log(age); // 30
-    if (true) {
-      console.log(age); // 26
-      let age = 26;
-    }
-    for(var ii = 0;ii<10;ii++){
-      (function(name){
-        setTimeout(() => {
-          console.log(name)
-        }, 1000)
-      })(ii)
-    }
   },
   methods: {
   }
