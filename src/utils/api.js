@@ -1,8 +1,7 @@
 import axios from 'axios';
-import url from './url'
 
 axios.defaults.timeout = 10000;
-axios.defaults.baseURL =url.API_URL;
+axios.defaults.baseURL ='';
 
 /**使用方法 */
 //main.js 引入
