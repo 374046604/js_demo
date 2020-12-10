@@ -3,9 +3,6 @@
     <a href="http://note.youdao.com/s/FyIxiORt" >
       <el-button size="mini" type="primary" round plain>学习笔记</el-button>
     </a>
-    <a href="http://note.youdao.com/s/FyIxiORt" >
-      <el-button size="mini" type="primary" round plain>手动封装个分页组件</el-button>
-    </a>
     <router-link :to="item" v-for="(item,index) in componentDoms" :key="index">
       <el-button size="mini" type="primary" round plain>{{componentNames[item]}}</el-button>
     </router-link>
@@ -22,7 +19,8 @@ export default {
         'timer60':'倒计时60秒',
         'distanceformatting':'距离格式化,手机格式化',
         'movablearea':'小程序实现悬浮球(能拖动)',
-        'isalipay':'判断是支付宝还是微信支付,生成小程序码'
+        'isalipay':'判断是支付宝还是微信支付,生成小程序码',
+        'mycomponent':'手动封装个分页组件'
       },
       componentDoms:''
     };
