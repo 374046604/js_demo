@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import sss from '@/components/Timer60'
 export default {
   name: "Home",
   data() {
@@ -22,7 +21,8 @@ export default {
         'isalipay':'判断是支付宝还是微信支付,生成小程序码',
         'mycomponent':'手动封装个分页组件,(感觉组件的逻辑还是要独立,不要和别的组件有关联)',
         'update':'图片上传',
-        'postcss':'postcss移动端适配'
+        'postcss':'postcss移动端适配',
+        'login':'封装登陆界面'
       },
       componentDoms:''
     };

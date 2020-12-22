@@ -67,7 +67,6 @@ export default {
         if (res.resultCode === '0') {
 					if(res.resultData.list.length>0){
             let list =res.resultData.list;
-            console.log(this.pageNo>1?[...this.list,...list]:list)
 						this.$emit('listChange',this.pageNo>1?[...this.list,...list]:list);
 						this.pageNo += 1;
 						this.loading = false;

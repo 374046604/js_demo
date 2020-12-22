@@ -17,6 +17,14 @@ Vue.prototype.$Get=Get;
 // Vue.prototype.$PATCH=PATCH;
 // Vue.prototype.$PUT=PUT;
 
+
+//自定义指令
+Vue.directive('loveInput',{
+  bind:function(el,binding, vnode){
+    el.value = 'ლ(′◉❥◉｀ლ)';
+  }
+})
+
 new Vue({
   router,
   store,
