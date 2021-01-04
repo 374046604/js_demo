@@ -22,7 +22,8 @@ export default {
         'mycomponent':'手动封装个分页组件,(感觉组件的逻辑还是要独立,不要和别的组件有关联)',
         'update':'图片上传',
         'postcss':'postcss移动端适配',
-        'login':'封装登陆界面'
+        'login':'封装登陆界面(开发中)',
+        'canvascom':'画布'
       },
       componentDoms:''
     };

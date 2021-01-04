@@ -1,0 +1,11 @@
+.canvas_box {
+    width: 100%;
+    height: 100vh;
+    min-width: 1400px;
+    background: #f4f7fb;
+    .canvas_main_box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -60,8 +60,6 @@ export default {
   .login_box {
     width: 100vw;
     height: 100vh;
-    background: url('../assets/img/login.mp4') no-repeat;
-    background-size: 100%;
     .login_back {
       width: 100%;
       height: 100%;

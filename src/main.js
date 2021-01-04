@@ -14,6 +14,9 @@ Vue.config.productionTip = false
 //定义全局变量
 Vue.prototype.$Post=Post;
 Vue.prototype.$Get=Get;
+
+Vue.prototype.$ComponentBox={};
+
 // Vue.prototype.$PATCH=PATCH;
 // Vue.prototype.$PUT=PUT;
 
@@ -23,6 +26,14 @@ Vue.directive('loveInput',{
   bind:function(el,binding, vnode){
     el.value = 'ლ(′◉❥◉｀ლ)';
   }
+})
+//自定义组件
+Vue.component('v-input', {
+  data: function () {
+    return {
+    }
+  },
+  template: '<el-input type="text"></el-input>'
 })
 
 new Vue({
