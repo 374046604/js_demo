@@ -46,8 +46,15 @@ export default {
       },
       //封装分页请求
       getList(flag){
-        if(flag) this.pageNo = 1;
-        if(this.list.length>0&&this.list.length==this.count)return false;
+        //第一页就不去校验什么 是否加载完毕
+        //万一一页就加载完了
+        if(flag){
+          this.pageNo = 1;
+        }else{
+          if(this.list.length==this.count){
+            return false
+          }
+        }
 				// this.$toast.loading({
         //     duration: 0,
         //     forbidClick: true,
