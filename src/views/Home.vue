@@ -25,7 +25,7 @@ export default {
         'login':'封装登陆界面(开发中)',
         'canvascom':'画布',
         'betterscroll':'上拉加载，封装分页',
-        'compressor':'图片压缩'
+        'compressor':'图片压缩,日期格式化'
       },
       componentDoms:''
     };
