@@ -24,6 +24,9 @@ export default {
     },
     data(){
       return {
+        pageNo:1,
+        pageSize:10,
+        count:10,
         list:[1,2,3,4,5,6,7,8,9,10]
       }
     },
@@ -40,7 +43,30 @@ export default {
         //每天都有几千条数据
         let list = []
         this.list = [...this.list,...[1,2,3,4,5,6,7,8,9,10]]
-			}
+      },
+      //封装分页请求
+      getList(flag){
+        if(flag) this.pageNo = 1;
+        if(this.list.length>0&&this.list.length==this.count)return false;
+				// this.$toast.loading({
+        //     duration: 0,
+        //     forbidClick: true,
+        //     message: '加载中...'
+        // });
+        let reqObj = {
+          pageNo:1,
+          pageSize:10
+        }
+				APIpayFlowList(reqObj).then(async res => {
+          if(res.resultCode === '0') {
+            // this.$toast.clear();
+            const data = res.resultData;
+
+            this.count = data.totalSize;//总行数
+            this.list = flag?(data.list||[]):this.list.concat(data.list);
+          }
+				})
+			},
     }
 };
 </script>

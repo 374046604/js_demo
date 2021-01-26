@@ -24,7 +24,7 @@ export default {
         'postcss':'postcss移动端适配',
         'login':'封装登陆界面(开发中)',
         'canvascom':'画布',
-        'betterscroll':'上拉加载'
+        'betterscroll':'上拉加载，封装分页'
       },
       componentDoms:''
     };
