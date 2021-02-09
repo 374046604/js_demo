@@ -41,6 +41,8 @@ export default {
       item = item.slice(2,-4);
       return item;
     })
+    //照着payFlowRecord 实现一个完美分页
+    debugger
   },
   methods: {
   }
