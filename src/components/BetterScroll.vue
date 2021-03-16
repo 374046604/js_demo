@@ -60,10 +60,11 @@ export default {
         //     forbidClick: true,
         //     message: '加载中...'
         // });
-        let reqObj = {
-          pageNo:1,
-          pageSize:10
-        }
+				let reqObj = {
+					pageNo:this.pageNo,
+					pageSize:this.pageSize,
+					//keywords:this.keywords
+				}
 				APIpayFlowList(reqObj).then(async res => {
           if(res.resultCode === '0') {
             // this.$toast.clear();
