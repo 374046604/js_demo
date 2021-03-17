@@ -35,14 +35,15 @@ export default {
     },
     methods:{
       pulldown(){
-				console.log('下拉')
-				this.list = [1,2,3,4,5,6,7,8,9,10];
+				// console.log('下拉')
+				// this.list = [1,2,3,4,5,6,7,8,9,10];
+        this.getList(true);
 			},
 			pullup(){
 				console.log('上拉');
         //每天都有几千条数据
-        let list = []
-        this.list = [...this.list,...[1,2,3,4,5,6,7,8,9,10]]
+        this.pageNo++;
+        this.getList();
       },
       //封装分页请求
       getList(flag){
