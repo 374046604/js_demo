@@ -120,8 +120,8 @@ export default {
 		//结果 1 2
 
 		//正确结果
-		//变量提升顺序： 函数>变量 
-		//undefined  2
+		//函数没传实参 形参=undefined;
+		//函数内有a 就不会去外面找a,当a未申明, 就是报错
     },
     methods:{
     }
