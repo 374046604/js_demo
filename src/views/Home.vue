@@ -27,7 +27,8 @@ export default {
         'betterscroll':'上拉加载，封装分页',
         'compressor':'图片压缩,日期格式化',
         'es6':'es6',
-        'sku':'SKU'
+        'sku':'SKU',
+        'leetcode':'力扣'
       },
       componentDoms:''
     };
@@ -41,6 +42,7 @@ export default {
       item = item.slice(2,-4);
       return item;
     })
+
   },
   methods: {
   }
