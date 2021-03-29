@@ -28,7 +28,8 @@ export default {
         'compressor':'图片压缩,日期格式化',
         'es6':'es6',
         'sku':'SKU',
-        'leetcode':'力扣'
+        'leetcode':'力扣',
+        'vueDemo':'封装vue组件demo'
       },
       componentDoms:''
     };
