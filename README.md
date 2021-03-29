@@ -24,3 +24,25 @@ drop: 拖拽图形在另一个图形上释放，在后者上触发
 > 排版位置变化
 
 
+
+//vue防抖 回调 时间差 是否立即执行
+export const debounce = (func, wait, immediate) => {
+    //防抖
+    let timeout;
+    return function () {
+        let context = this, args = arguments;
+        let later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+getFlowList:debounce(function(item) {
+	console.log(111)
+	// this.$router.push('payFlowList?id='+item.id)
+},1000)
