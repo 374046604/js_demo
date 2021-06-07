@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import utils from '@/utils/utils'
 export default {
   name: "Home",
   data() {
@@ -29,7 +30,7 @@ export default {
         'es6':'es6',
         'sku':'SKU',
         'leetcode':'力扣',
-        'vueDemo':'封装vue组件demo'
+        'vuedemo':'封装vue组件demo'
       },
       componentDoms:''
     };
@@ -43,7 +44,7 @@ export default {
       item = item.slice(2,-4);
       return item;
     })
-
+    console.log(utils.rpxToPx);
   },
   methods: {
   }
