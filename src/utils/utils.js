@@ -2,7 +2,7 @@
 // https://juejin.cn/post/6862591794312560647
 let utils = {
   //uniapp rpx转px
-  rpxToPx(callBack){
+  rpxToPx:(callBack) => {
     // this.rpxToPx((PX)=>{
     //   _this.setData({
     //     marginTop: -240,
@@ -22,15 +22,24 @@ let utils = {
     })
   },
   //防抖：
-  debounce(callbackFn, wait) {
-    //或者赋值到vue的方法里面使用
-    //window.addEventListener('scroll', debounce(handle, 1000));
-    var timeout = null;
-    return function() {
-        if(timeout !== null) 
-                clearTimeout(timeout);
-        timeout = setTimeout(callbackFn, wait);
-    }
+  debounce:(func, wait, immediate) => {
+    // getFlowList:debounce(function(item) {
+    //   console.log(111)
+    //   // this.$router.push('payFlowList?id='+item.id)
+    // },1000)
+    //防抖
+    let timeout;
+    return function () {
+        let context = this, args = arguments;
+        let later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
   },
   //节流
   throttle(fn, interval) {
