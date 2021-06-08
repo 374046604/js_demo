@@ -30,7 +30,8 @@ export default {
         'es6':'es6',
         'sku':'SKU',
         'leetcode':'力扣',
-        'vuedemo':'封装vue组件demo'
+        'vuedemo':'封装vue组件demo',
+        'element':'封装element'
       },
       componentDoms:''
     };
