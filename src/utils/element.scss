@@ -28,7 +28,27 @@
 }
 .my_input_box {
     position: relative;
+    height: 100%;
+    width: 100%;
     .my_input {
         font-size: 14px;
     }
+    .clear_icon {
+        position: absolute;
+        right: 5px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    .my_input.is_textarea {
+        line-height: 1.5;
+        height:  auto;
+        word-wrap:break-word; 
+    }
+}
+.textarea {
+    height: 100px;
+    line-height: 20px;
+    vertical-align: text-top;
 }
