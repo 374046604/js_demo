@@ -175,6 +175,14 @@ Vue.prototype.$prompt = MessageBox.prompt;
 Vue.prototype.$notify = Notification;
 Vue.prototype.$message = Message;
 
+//引入自己封装的组件库
+import modules from './myElement/index.js'
+const components = [
+  ...modules
+]
+components.forEach(component => {
+  Vue.component(component.name, component);
+});
 
 
 

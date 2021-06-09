@@ -1,24 +1,26 @@
 <template>
   <div class="element_box">
-		<div class="element_li">
-			<el-input v-model="aa" disabled/>
-			<input :class="`my_inner my_input ${disabled&&'is_disabled'}`" v-model="aa" :disabled="disabled"/>
+		<div class="element_li mar_b_20">
+			<el-input v-model="test" disabled/>
+			<el-input v-model="test" clearable/>
+      <my-input/>
 		</div>
   </div>
 </template>
 
 <script>
-import ss from "../utils/element.scss";
 export default {
   name: "element_components",
   data() {
     return {
-      aa: "111",
-			disabled:true,
-	  
+      test:2222,
+      myInput: "111",
+			myDisabled:true,
+      myClearable:true
     };
   },
-  mounted() {},
+  mounted() {
+  },
   methods: {},
 };
 </script>

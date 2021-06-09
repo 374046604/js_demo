@@ -26,6 +26,9 @@
     background: #f3f6f9;
     color: #C0C4CC;
 }
-.my_input {
-    font-size: 14px;
+.my_input_box {
+    position: relative;
+    .my_input {
+        font-size: 14px;
+    }
 }
