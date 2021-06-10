@@ -30,7 +30,8 @@
     position: relative;
     height: 100%;
     width: 100%;
-    .my_input {
+    .my_input,
+    .my_textarea {
         font-size: 14px;
     }
     .clear_icon {
@@ -41,14 +42,11 @@
         display: flex;
         align-items: center;
     }
-    .my_input.is_textarea {
-        line-height: 1.5;
+    .is_textarea {
+        padding: 10px 15px;
+        line-height: 40px;
         height:  auto;
-        word-wrap:break-word; 
+        word-wrap:break-word;
+        max-height: 200px; 
     }
-}
-.textarea {
-    height: 100px;
-    line-height: 20px;
-    vertical-align: text-top;
 }
