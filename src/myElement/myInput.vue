@@ -23,11 +23,17 @@
       ></textarea>
       <div class="clear_icon">
         <!-- 带清除的input -->
-        <div v-if="showIcon" @click="clearInputFun">❎</div>
+        <div v-if="showIcon" @click="clearInputFun">
+          <i class="iconfont icon-shibai"></i>
+        </div>
         <!-- 带图标的input -->
-        <div v-if="icon == 'date_icon'">📅</div>
+        <div v-if="icon == 'date_icon'">
+          <i class="iconfont icon-rili"></i>
+        </div>
         <!-- 带显示密码的input -->
-        <div v-if="showPassword" @click="showPasswordFun">✅</div>
+        <div v-if="showPassword" @click="showPasswordFun">
+          <i class="iconfont icon-yanjing"></i>
+        </div>
       </div>
     </div>
   </div>

@@ -31,7 +31,8 @@ export default {
         'sku':'SKU',
         'leetcode':'力扣',
         'vuedemo':'封装vue组件demo',
-        'element':'封装element'
+        'element':'封装element',
+        'scss':'scss常用方法'
       },
       componentDoms:''
     };

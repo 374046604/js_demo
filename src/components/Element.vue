@@ -1,6 +1,5 @@
 <template>
   <div class="element_box">
-    <el-button @click="testFun()">mixins的函数名冲突，以组价内部为准</el-button >
     <div class="element_li mar_b_20">
       <el-input v-model="test" disabled />
       <el-input v-model="test" clearable />
@@ -24,10 +23,19 @@
       <my-input v-model="name" icon="date_icon" />
       <my-input v-model="name" rows="20" type="textarea" />
     </div>
+    <div class="element_li mar_b_20">
+      <el-button>默认按钮</el-button>
+      <el-button type="primary">主要按钮</el-button>
+      
+      <my-button>默认按钮</my-button>
+      <my-button type="primary">主要按钮</my-button>
+    </div>
+
   </div>
 </template>
 
 <script>
+import myInput from '../myElement/myInput.vue';
 let testMixins = {
   methods: {
     testFun(){
@@ -36,6 +44,7 @@ let testMixins = {
   }
 }
 export default {
+  components: { myInput },
   name: "element_components",
   data() {
     return {
@@ -54,5 +63,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../utils/element.scss";
 </style>

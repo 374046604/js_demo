@@ -87,6 +87,7 @@ import {
 } from 'element-ui';
 
 import './utils/common.css'
+import './assets/iconfont/iconfont.css'
 
 Vue.config.productionTip = false
 
