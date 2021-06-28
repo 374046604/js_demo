@@ -1,6 +1,32 @@
 <template>
   <div class="element_box">
     <div class="element_li mar_b_20">
+      <el-button type="primary">主要按钮</el-button>
+      <el-button type="primary" plain>主要按钮</el-button>
+      <el-button type="primary" plain disabled>主要按钮</el-button>
+      <el-button icon="el-icon-search" circle></el-button>
+      <el-button type="success" icon="el-icon-check" circle></el-button>
+      <el-button type="primary" icon="el-icon-delete">222</el-button>
+      <el-button type="primary" :loading="true">加载中</el-button>
+      <el-button-group>
+        <el-button type="primary" icon="el-icon-edit"></el-button>
+        <el-button type="primary" icon="el-icon-share"></el-button>
+        <el-button type="primary" icon="el-icon-delete"></el-button>
+      </el-button-group>
+      <div></div>
+      <my-button type="primary">主要按钮</my-button>
+      <my-button type="primary" plain>简朴按钮</my-button>
+      <my-button type="primary" disabled>主要按钮</my-button>
+      <my-button circle icon="el-icon-search"></my-button>
+      <my-button type="success" icon="el-icon-check" circle></my-button>
+      <my-button type="success" icon="el-icon-check" >222</my-button>
+      <my-button-group>
+        <my-button type="primary" icon="el-icon-edit"></my-button>
+        <my-button type="primary" icon="el-icon-share"></my-button>
+        <my-button type="primary" icon="el-icon-delete"></my-button>
+      </my-button-group>
+    </div>
+    <div class="element_li mar_b_20">
       <el-input v-model="test" disabled />
       <el-input v-model="test" clearable />
       <el-input
@@ -22,13 +48,6 @@
       <my-input v-model="name" showPassword />
       <my-input v-model="name" icon="date_icon" />
       <my-input v-model="name" rows="20" type="textarea" />
-    </div>
-    <div class="element_li mar_b_20">
-      <el-button>默认按钮</el-button>
-      <el-button type="primary">主要按钮</el-button>
-      
-      <my-button>默认按钮</my-button>
-      <my-button type="primary">主要按钮</my-button>
     </div>
 
   </div>

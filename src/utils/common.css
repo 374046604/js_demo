@@ -41,6 +41,12 @@ button:disabled{
     -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+.flex1 {flex: 1;}
+
 .clear15 {height: 15px;}
 .clear20 {height: 20px;}
 .clear25 {height: 25px;}
@@ -89,8 +95,6 @@ button:disabled{
 
 .font_400 {font-weight: 400;}
 .font_600 {font-weight: 600;}
-
-.flex1 {flex: 1;}
 
 .mar_t_10 {margin-top:10px; }
 .mar_t_20 {margin-top:20px; }

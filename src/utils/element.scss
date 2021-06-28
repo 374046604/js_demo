@@ -26,6 +26,8 @@
     background: #f3f6f9;
     color: #C0C4CC;
 }
+
+/* my_input_box */
 .my_input_box {
     position: relative;
     height: 100%;
@@ -50,30 +52,76 @@
         max-height: 200px; 
     }
 }
-.my_button_box {
-    display: inline-block;
-    .my_button {
-        display: inline-block;
-        line-height: 1;
-        white-space: nowrap;
-        cursor: pointer;
-        background: #FFF;
-        border: 1px solid #DCDFE6;
-        color: #606266;
-        -webkit-appearance: none;
-        text-align: center;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        outline: 0;
-        margin: 0;
-        -webkit-transition: .1s;
-        transition: .1s;
-        font-weight: 500;
-        padding: 12px 20px;
-        font-size: 14px;
-        border-radius: 4px;
-    }
+
+/* my_button_group */
+.my_button_group>.my_button:not(:first-child):not(:last-child) {
+    border-radius: 0;
 }
-.my_button_box+.my_button_box {
+.my_button_group>.my_button + .my_button {
+    margin-left: 0;
+    border-left: 1px solid #DCDFE6;
+}
+.my_button_group>.my_button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.my_button_group>.my_button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+/* my_button */
+.my_button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #FFF;
+    border: 1px solid #DCDFE6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.my_button+.my_button {
     margin-left: 10px;
+}
+.my_button .icon + span {
+    margin-left: 5px;
+}
+.my_button.is_round {
+    border-radius: 20px;
+    padding: 12px 23px;
+}
+.my_button.is_circle {
+    border-radius: 50%; 
+    padding: 12px; 
+}
+.my_button.is_disabled,
+.my_button.is_disabled:focus,
+.my_button.is_disabled:hover,
+.my_button.is_disabled:active {
+    opacity: 0.5!important;
+    color: #FFF!important;
+    background-color: #a0cfff!important;
+    border-color: #a0cfff!important;
+    //!!选中禁用图标
+}
+.my_button_primary {
+    color: #FFF;
+    background-color: #409EFF;
+    border-color: #409EFF;
+}
+.my_button_primary.is_plain {
+    color: #409EFF;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
 }
