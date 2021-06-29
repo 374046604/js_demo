@@ -151,6 +151,12 @@
             width: ( $col / 24 * 100) * 1%;
         }
     }
+    //偏移量
+    @for $offset from 1 through 24 {
+        .my_col.my_offset_#{$offset} {
+            margin-left: ( $offset / 24 * 100) * 1%;
+        }
+    }
 }
 //间隔
 @for $gutter from 1 through 50 {

@@ -19,7 +19,7 @@
       <my-button type="primary" disabled>主要按钮</my-button>
       <my-button circle icon="el-icon-search"></my-button>
       <my-button type="success" icon="el-icon-check" circle></my-button>
-      <my-button type="success" icon="el-icon-check" >222</my-button>
+      <my-button type="success" icon="el-icon-check">222</my-button>
       <my-button-group>
         <my-button type="primary" icon="el-icon-edit"></my-button>
         <my-button type="primary" icon="el-icon-share"></my-button>
@@ -42,7 +42,7 @@
         show-password
         clearable
       ></el-input>
-      
+
       <my-input v-model="name" disabled />
       <my-input v-model="name" clearable />
       <my-input v-model="name" showPassword />
@@ -51,30 +51,46 @@
     </div>
     <div class="element_li mar_b_20">
       <el-row>
-        <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
+        <el-col :span="24"
+          ><div class="grid-content bg-purple-dark"></div
+        ></el-col>
       </el-row>
       <el-row>
         <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="12"
+          ><div class="grid-content bg-purple-light"></div
+        ></el-col>
       </el-row>
       <el-row>
         <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="8"
+          ><div class="grid-content bg-purple-light"></div
+        ></el-col>
         <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
       </el-row>
       <el-row>
         <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="6"
+          ><div class="grid-content bg-purple-light"></div
+        ></el-col>
         <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="6"
+          ><div class="grid-content bg-purple-light"></div
+        ></el-col>
       </el-row>
       <el-row>
         <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="4"
+          ><div class="grid-content bg-purple-light"></div
+        ></el-col>
         <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="4"
+          ><div class="grid-content bg-purple-light"></div
+        ></el-col>
         <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="4"
+          ><div class="grid-content bg-purple-light"></div
+        ></el-col>
       </el-row>
       <div class="clear_15"></div>
       <my-row>
@@ -105,43 +121,52 @@
       </my-row>
       <my-row :gutter="10">
         <my-col :span="8"></my-col>
-        <my-col :span="8"></my-col>
-        <my-col :span="8"></my-col>
+        <my-col :span="8" :offset="8"></my-col>
       </my-row>
     </div>
+    <div class="element_li mar_b_20">
+      <el-radio v-model="radio1" label="1">备选项</el-radio>
+      <el-radio v-model="radio1" label="2">备选项</el-radio>
+    </div>
+    <div class="element_li mar_b_20"></div>
+      <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+      <input type="checkbox" name="vehicle" value="Car">I have a car
   </div>
 </template>
 
 <script>
+import radio from "../../element/radio/src/radio.vue";
 let testMixins = {
   methods: {
-    testFun(){
-      console.log('1111111')
-    }
-  }
-}
+    testFun() {
+      console.log("1111111");
+    },
+  },
+};
 export default {
+  components: { radio },
   name: "element_components",
   data() {
     return {
       name: "",
       test: "22222",
+      radio1: "",
     };
   },
   mixins: [testMixins],
   mounted() {},
   methods: {
-    testFun(){
-      console.log('2222222')
-    }
+    testFun() {
+      console.log("2222222");
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-  .grid-content {
-    border: 1px solid red;
-    border-radius: 10px;
-    min-height: 36px;
-  }
+.grid-content {
+  border: 1px solid red;
+  border-radius: 10px;
+  min-height: 36px;
+}
 </style>
