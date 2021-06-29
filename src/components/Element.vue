@@ -49,12 +49,70 @@
       <my-input v-model="name" icon="date_icon" />
       <my-input v-model="name" rows="20" type="textarea" />
     </div>
-
+    <div class="element_li mar_b_20">
+      <el-row>
+        <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+      </el-row>
+      <div class="clear_15"></div>
+      <my-row>
+        <my-col :span="24"></my-col>
+      </my-row>
+      <my-row>
+        <my-col :span="12"></my-col>
+        <my-col :span="12"></my-col>
+      </my-row>
+      <my-row>
+        <my-col :span="8"></my-col>
+        <my-col :span="8"></my-col>
+        <my-col :span="8"></my-col>
+      </my-row>
+      <my-row>
+        <my-col :span="6"></my-col>
+        <my-col :span="6"></my-col>
+        <my-col :span="6"></my-col>
+        <my-col :span="6"></my-col>
+      </my-row>
+      <my-row>
+        <my-col :span="4"></my-col>
+        <my-col :span="4"></my-col>
+        <my-col :span="4"></my-col>
+        <my-col :span="4"></my-col>
+        <my-col :span="4"></my-col>
+        <my-col :span="4"></my-col>
+      </my-row>
+      <my-row :gutter="10">
+        <my-col :span="8"></my-col>
+        <my-col :span="8"></my-col>
+        <my-col :span="8"></my-col>
+      </my-row>
+    </div>
   </div>
 </template>
 
 <script>
-import myInput from '../myElement/myInput.vue';
 let testMixins = {
   methods: {
     testFun(){
@@ -63,7 +121,6 @@ let testMixins = {
   }
 }
 export default {
-  components: { myInput },
   name: "element_components",
   data() {
     return {
@@ -82,4 +139,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .grid-content {
+    border: 1px solid red;
+    border-radius: 10px;
+    min-height: 36px;
+  }
 </style>

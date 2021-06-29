@@ -35,6 +35,12 @@ export default {
     box-shadow: 0px 0px 5px black;
     margin: 10px;
   }
+  //循环用法
+  @for $col from 1 through 24 {
+    .my_col.my_col_#{$col} {
+        width: ( $col / 24 * 100) * 1%;
+    }
+  }
   .test {
     width: $width100;
     height: remToPx(2);

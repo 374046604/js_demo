@@ -184,7 +184,8 @@ const components = [
 components.forEach(component => {
   Vue.component(component.name, component);
 });
-
+//引入封装组件的样式
+import './utils/element.scss'
 
 
 //定义全局变量

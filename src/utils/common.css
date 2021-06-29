@@ -47,20 +47,20 @@ button:disabled{
 }
 .flex1 {flex: 1;}
 
-.clear15 {height: 15px;}
-.clear20 {height: 20px;}
-.clear25 {height: 25px;}
-.clear30 {height: 30px;}
-.clear35 {height: 35px;}
-.clear40 {height: 40px;}
-.clear45 {height: 45px;}
-.clear50 {height: 50px;}
-.clear55 {height: 55px;}
-.clear60 {height: 60px;}
-.clear65 {height: 65px;}
-.clear70 {height: 70px;}
-.clear75 {height: 75px;}
-.clear160 {height: 160px;}
+.clear_15 {height: 15px;}
+.clear_20 {height: 20px;}
+.clear_25 {height: 25px;}
+.clear_30 {height: 30px;}
+.clear_35 {height: 35px;}
+.clear_40 {height: 40px;}
+.clear_45 {height: 45px;}
+.clear_50 {height: 50px;}
+.clear_55 {height: 55px;}
+.clear_60 {height: 60px;}
+.clear_65 {height: 65px;}
+.clear_70 {height: 70px;}
+.clear_75 {height: 75px;}
+.clear_160 {height: 160px;}
 
 .color_red {color: #FF233C;}
 .color_font,.color_333 { color: #333333;}

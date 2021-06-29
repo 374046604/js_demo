@@ -1,12 +1,15 @@
 <template>
-  <div class="my_button_group">
+  <div class="my_row" :class="`${gutter?'my_gutter_'+gutter:''}`">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: "myButtonGroup"
+  name: "myRow",
+  props:{
+    gutter:Number,//间隔
+  }
 };
 </script>
 
