@@ -1,11 +1,11 @@
-  //定义变量
-  $width100 :100%;
-  $height50 : 50px;
-  //插槽#{$name} 类似 ${} 
-  //一般是用于输出具体的转换
-  @function row24($col:24){
+//定义变量
+$width100 :100%;
+$height50 : 50px;
+//插槽#{$name} 类似 ${} 
+//一般是用于输出具体的转换
+@function row24($col:24){
     @return ($col/24)*100 * 1%;
-  } 
+} 
 //公共样式
 .my_inner {
     -webkit-appearance: none;
@@ -134,6 +134,7 @@
     border-color: #b3d8ff;
 }
 
+
 .my_row {
     display: flex;
     width: 100%;
@@ -157,6 +158,13 @@
             margin-left: ( $offset / 24 * 100) * 1%;
         }
     }
+    @media only screen and (max-width: 768px) {
+        @for $col from 1 through 24 {
+            .my_col.my_col_xs_#{$col} {
+                width: ( $col / 24 * 100) * 1%;
+            }
+        }
+    }
 }
 //间隔
 @for $gutter from 1 through 50 {
@@ -164,4 +172,9 @@
         padding-left: ( $gutter / 2) + px;
         padding-right: ( $gutter / 2) + px;
     }
+}
+
+
+.my_radio {
+    display: inline-block;
 }

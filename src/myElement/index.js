@@ -4,11 +4,13 @@ import myButton from './myButton.vue'
 import myButtonGroup from './myButtonGroup.vue'
 import myRow from './myRow.vue'
 import myCol from './myCol.vue'
+import myRadio from './myRadio.vue'
 let modules = [
     myInput,
     myButton,
     myButtonGroup,
     myRow,
-    myCol
+    myCol,
+    myRadio
 ]
 export default modules;

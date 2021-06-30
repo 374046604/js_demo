@@ -121,12 +121,17 @@
       </my-row>
       <my-row :gutter="10">
         <my-col :span="8"></my-col>
-        <my-col :span="8" :offset="8"></my-col>
+        <my-col :span="8" :xs="10"></my-col>
       </my-row>
     </div>
     <div class="element_li mar_b_20">
       <el-radio v-model="radio1" label="1">备选项</el-radio>
       <el-radio v-model="radio1" label="2">备选项</el-radio>
+      {{radio1}}
+      <div></div>
+      <input type="radio" name="vehicle" value="1">I have a bike<br>
+      <input type="radio" name="vehicle" value="2">I have a bike<br>
+      <my-radio>选项1</my-radio>
     </div>
     <div class="element_li mar_b_20"></div>
       <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
@@ -144,7 +149,6 @@ let testMixins = {
   },
 };
 export default {
-  components: { radio },
   name: "element_components",
   data() {
     return {

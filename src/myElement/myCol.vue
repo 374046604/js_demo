@@ -1,5 +1,5 @@
 <template>
-  <div class="my_col" :class="`${span>24?'my_col_24':'my_col_'+span} ${offset?'my_offset_'+offset:''}`">
+  <div class="my_col" :class="`${span>24?'my_col_24':'my_col_'+span} ${offset?'my_offset_'+offset:''} ${xs?'my_col_xs_'+xs:''}`">
     <div>
       <slot></slot>
     </div>
@@ -12,6 +12,7 @@ export default {
   props:{
     span:Number,//占有的分数 总分数24
     offset:Number,//偏移量
+    xs:Number,//媒体查询 小于766px的展示
   }
 };
 </script>
