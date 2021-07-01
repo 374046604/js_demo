@@ -127,20 +127,24 @@
     <div class="element_li mar_b_20">
       <el-radio v-model="radio1" label="1">备选项</el-radio>
       <el-radio v-model="radio1" label="2">备选项</el-radio>
+      <el-radio disabled v-model="radio1" label="禁用">备选项</el-radio>
+      <el-radio disabled v-model="radio1" label="选中且禁用">备选项</el-radio>
       {{radio1}}
-      <div></div>
-      <input type="radio" name="vehicle" value="1">I have a bike<br>
-      <input type="radio" name="vehicle" value="2">I have a bike<br>
-      <my-radio>选项1</my-radio>
+      <div>label是选中时候最终传递的值，v-model控制是否选中</div>
+      <my-radio v-model="radio2" :label="222">选项1</my-radio>
+      <my-radio v-model="radio2" :label="333">选项2</my-radio>
+      <my-radio v-model="radio2" :label="333" disabled>选项2</my-radio>
     </div>
-    <div class="element_li mar_b_20"></div>
-      <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
-      <input type="checkbox" name="vehicle" value="Car">I have a car
+    <my-step v-model="stepNumber" :fun="testFun"></my-step>
+    <div class="clear_50"></div>
+
   </div>
+
 </template>
 
 <script>
 import radio from "../../element/radio/src/radio.vue";
+import MyStep from "../components/MyStep.vue";
 let testMixins = {
   methods: {
     testFun() {
@@ -155,7 +159,12 @@ export default {
       name: "",
       test: "22222",
       radio1: "",
+      radio2: "",
+      stepNumber:10
     };
+  },
+  components:{
+    MyStep
   },
   mixins: [testMixins],
   mounted() {},

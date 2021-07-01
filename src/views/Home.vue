@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import utils from '@/utils/utils'
+import { rpxToPx } from '@/utils/index.js'
 export default {
   name: "Home",
   data() {
@@ -32,7 +32,8 @@ export default {
         'leetcode':'力扣',
         'vuedemo':'封装vue组件demo',
         'element':'封装element',
-        'scss':'scss常用方法'
+        'scss':'scss常用方法',
+        'mystep':'封装step'
       },
       componentDoms:''
     };
@@ -46,7 +47,6 @@ export default {
       item = item.slice(2,-4);
       return item;
     })
-    console.log(utils.rpxToPx);
   },
   methods: {
   }
