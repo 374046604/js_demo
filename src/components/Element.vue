@@ -135,8 +135,6 @@
       <my-radio v-model="radio2" :label="333">选项2</my-radio>
       <my-radio v-model="radio2" :label="333" disabled>选项2</my-radio>
     </div>
-    <my-step v-model="stepNumber" :fun="testFun"></my-step>
-    <div class="clear_50"></div>
 
   </div>
 
@@ -144,7 +142,6 @@
 
 <script>
 import radio from "../../element/radio/src/radio.vue";
-import MyStep from "../components/MyStep.vue";
 let testMixins = {
   methods: {
     testFun() {
@@ -160,11 +157,7 @@ export default {
       test: "22222",
       radio1: "",
       radio2: "",
-      stepNumber:10
     };
-  },
-  components:{
-    MyStep
   },
   mixins: [testMixins],
   mounted() {},

@@ -1,59 +1,29 @@
 <template>
-  <div class="step_box">
-    <div @click="jianStep">-</div>
-    <div class="step_number">{{ stepNumber||0 }}</div>
-    <div @click="jiaStep">+</div>
-  </div>
+  <my-step v-model="stepNumber" :jiaFun="testFun" :jianFun="testFun"></my-step>
 </template>
 
 <script>
+import myStep from './myStep/index.vue'
 export default {
-  name: "myStep",
-	model: {
-		prop: 'stepNumber',
-		event: 'changeNumber'
-	},
-	props:{
-		stepNumber:{
-			type:Number,
-			default:0
+    name:'testStep',
+    data(){
+      return {
+        stepNumber:10
+      }
+    },
+		components:{
+			myStep
 		},
-		fun:{}
-	},
-  data() {
-    return {};
-  },
-  mounted() {},
-	methods: {
-		jianStep(){
-			let stepNumber = Number(JSON.parse(JSON.stringify(this.stepNumber)))-1;
-			if(stepNumber<=-1) {
-				return false;
-			}
-			this.$emit('changeNumber',stepNumber)
-		},
-		jiaStep(){
-			let stepNumber = Number(JSON.parse(JSON.stringify(this.stepNumber)))+1;
-			this.$emit('changeNumber',stepNumber)
-			this.fun()
+    mounted(){
+
+    },
+    methods:{
+			testFun() {
+				console.log('执行父级传过来的函数,this指向父级')
+			},
 		}
-	},
 };
 </script>
 
-<style scoped>
-.step_box {
-  display: flex;
-  align-items: center;
-	line-height: 100%;
-}
-.step_box>div {
-	width: 20px;
-	height: 20px;
-	line-height: 20px;
-	text-align: center;
-}
-.step_box .step_number {
-	width: 50px;
-}
+<style lang="scss" scoped>
 </style>

@@ -51,4 +51,25 @@ export default {
   }
   //后续继承什么的 遇到在说吧。
   //scss还有很多内置函数的东西 上面都常用 的用法
+
+  // 后续来了
+  // scss变量其实就是宏，不是真的变量，一旦编译不可覆盖和改写 这导致无法动态样式
+  // 动态样式写法(使用的css原生变量)
+
+  .menu_box {
+    --background:#D3533D;
+
+    font-size: 24rpx;
+    background: #FFF;
+    overflow: hidden;
+    &.hui {
+        --background:#D1D1D1;
+        view {
+          background: var(--background);
+        }
+    }
+  
+  }
+
+
 </style>
