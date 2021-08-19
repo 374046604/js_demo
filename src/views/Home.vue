@@ -33,7 +33,8 @@ export default {
         'vuedemo':'封装vue组件demo',
         'element':'封装element',
         'scss':'scss常用方法',
-        'mystep':'封装step'
+        'mystep':'封装step',
+        'utils':'工具函数封装'
       },
       componentDoms:''
     };
