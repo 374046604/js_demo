@@ -39,17 +39,26 @@ export default {
       class Pro{
         constructor(callback){
           this.status = 'loading';
-          let ok = function(value){
+          this.value = null;
+
+          this.onOkList = [];//成功的订阅队列
+          this.onOffList = [];//失败的订阅
+          let ok = (value) => {
             if(this.status!='loading'){
               return false;
             }
             this.status ='ok';
+            this.value = value;
+            console.log('执行了成功返回',value);
+            this.onOkList.forEach(fn=>fn());
           }
-          let off = function(value){
+          let off = (value) => {
             if(this.status!='loading'){
               return false;
             }
             this.status = 'off';
+            this.value = value;
+            this.onOffList.forEach(fn=>fn());
           }
           // 如果executor执行报错，直接执行reject
           try{
@@ -58,16 +67,34 @@ export default {
             off(err);
           }
         }
-        then = (thenOk,thenOff)=>{
+        then(thenOk,thenOff){
           if(this.status=='loading')return false;
           if(this.status=='ok'){
             thenOk(this.value)
           } else if(this.status=='off'){
             thenOff(this.value);
+          } else {
+            //当前存在一个问题 就是异步后只会执行 ok off方法 ，then方法早执行完了，这就很头大，利用订阅模式
+            //当前添加订阅
+            this.onOkList.push(()=>{
+              thenOk(this.value)
+            })
+            this.onOffList.push(()=>{
+              thenOff(this.value)
+            })
           }
         }
       }
-      let aa = new Pro()
+      let aa = new Pro((ok,off)=>{
+        setTimeout(() => {
+          ok('成功结果')
+        }, 1000);
+      });
+      aa.then((value)=>{
+        console.log('成功的结果',value)
+      },(value)=>{
+        console.log(value)
+      })
     },
     methods:{
       //防抖 第一版
