@@ -35,7 +35,7 @@ export default {
         }
       }
 
-      //手写promise
+      //001手写promise
       class Pro{
         constructor(callback){
           this.status = 'loading';
@@ -95,6 +95,8 @@ export default {
       },(value)=>{
         console.log(value)
       })
+      //002运用async await 
+      this.testFun();
     },
     methods:{
       //防抖 第一版
@@ -104,6 +106,19 @@ export default {
           clearTimeout(timer);
           setTimeout(fn, time);
         }
+      },
+      async testFun(){
+        let testAwait = ()=>{
+          return new Promise((resolve)=>{
+            setTimeout(() => {
+              resolve('2000')
+            }, 2000);
+          })
+        }
+        console.log('1111');
+        let out = await testAwait();
+        console.log(out)
+
       }
     }
 }
